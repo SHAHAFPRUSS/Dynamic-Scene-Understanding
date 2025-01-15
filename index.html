@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta property="og:title" content="Dynamic Scene Understanding from Vision-Language Representations"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:image" content="static/system/favicon.jpeg"/>
+    <meta property="og:image:width" content="12000"/>
+    <meta property="og:image:height" content="630"/>
+
+
+    <title>Dynamic Scene Understanding</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="icon" href="static/system/favicon.jpeg">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+</head>
+<body>
+
+
+<section class="publication-header">
+    <div class="hero-body">
+        <div class="container is-max-widescreen">
+            <!-- <div class="columns is-centered"> -->
+            <div class="column has-text-centered">
+                <h1 class="title is-1 publication-title">Dynamic Scene Understanding <br> from Vision-Language Representations</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="publication-author-block">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <div class="is-size-3 publication-authors">
+                    </div>
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">Shahaf Pruss*<sup>1</sup>,</span>
+                        <span class="author-block">Morris Alper*<sup>1,2</sup>,</span>
+                        <span class="author-block">Hadar Averbuch-Elor<sup>1,2</sup></span>           
+                    </div>                    
+                    <div class='row mb-1'>
+                      <div class='col text-center'>
+                        <p class="h6">
+                          <sup>1</sup><span>Tel Aviv University</span>,
+                          <sup>2</sup><span>Cornell University</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col text-center">
+                          <p class="h6">
+                              * Equal Contribution
+                          </p>
+                      </div>
+                  </div>                         
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+              
+                        <span class="link-block">
+                            <a href="https://arxiv.org/abs" target="_blank"
+                            class="external-link button is-normal is-rounded">
+                            <span class="icon">
+                                <i class="ai ai-arxiv"></i>
+                            </span>
+                            <span>arXiv | Coming Soon</span>
+                            </a>
+                        </span>
+
+                        <span class="link-block">
+                            <a class="external-link button is-normal is-rounded is-disabled" href="https://github.com/">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>Code | Coming Soon</span>
+                            </a>
+                        </span>
+                                                </a>
+                        </span>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-small">
+    <!-- <div class="hero-body"> -->
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="hero-body">
+                <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+                <div class="container">
+                    <div class="item">
+                        <div class="column is-centered has-text-centered">
+                            <img style="width:500px; height:auto;" src="static/teaser/teaser_04_11.jpg" alt="NeTI" />
+                            <h2 class="subtitle">
+                                Given an input image depicting a dynamic scene, our framework performs a variety of dynamic scene understanding tasks, such as human-object interactions, human-human and recognition of grounded situations, (A, B, C respectively above). Each of these predicts different entities and relations, possibly grounded in the input image (visualized as bounding boxes on the right). Our generic method contrasts with previous approaches tailored to a single such task.
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <!--  </div> -->
+            </div>
+        </div>
+        <!--  </div> -->
+    </section>
+
+    <section class="section hero is-light">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <!-- div class="item">
+                      <p style="margin-bottom: 30px">
+                    <video poster="" id="tree" autoplay controls muted loop height="100%">
+                      <source src="static/figures/video.mp4"
+                      type="video/mp4">
+                    </video>
+                    </p>
+                    </div -->
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                             Images depicting complex, dynamic scenes are challenging to parse automatically, requiring both high-level comprehension of the overall situation and fine-grained identification of participating entities and their interactions. Current approaches use distinct methods tailored to sub-tasks such as Situation Recognition and detection of Human-Human and Human-Object Interactions.
+                             However, recent advances in image understanding have often leveraged web-scale vision-language (V&L) representations to obviate task-specific engineering.
+                             In this work, we propose a framework for dynamic scene understanding tasks by leveraging knowledge from modern, frozen V&L representations.
+                             By framing these tasks in a generic manner - as predicting and parsing structured text, or by directly concatenating representations to the input of existing models - we achieve state-of-the-art results while using a minimal number of trainable parameters relative to existing approaches.
+                             Moreover, our analysis of dynamic knowledge of these representations shows that recent, more powerful representations effectively encode dynamic scene semantics, making this approach newly possible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Abstract. -->
+        </div>
+    </section>
+
+    <!-- <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title has-text-centered">Video</h2>
+          <center>
+            <iframe width="630" height="354" src="" title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen></iframe>
+          </center>
+        </div>
+      </div>
+    </section> -->
+
+
+    <section class="section hero is-light">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">How Does it Work?</h2>
+                    <div class="content has-text-justified">
+                    </div>
+                    <div class="column is-centered has-text-centered">
+                        <img class="large-image" src="static/system/method_13_11.jpg" alt="method" />
+                    </div>
+                    <ul class="column is-centered has-text-justified">
+                      We propose a framework for using frozen multimodally pretrained vision representations to perform dynamic scene understanding tasks. This consists of two complementary methods for overall scene understanding and grounded prediction respectively. We illustrate our framework for performing high-level (top) and grounded (bottom) tasks, exemplified by the tasks of SiR and GSR in the figure. For overall scene understanding tasks we add trainable weights to the VLM text decoder and fine-tune these using a standard token-wise language modeling objective to predict the desired labels as formatted text. For grounded prediction tasks we concatenate the V&L embeddings to the existing vision backbone embeddings. 
+                    </ul>
+                </div>
+            </div>
+          </p>
+        </div>
+    </section>
+
+    <section class="section hero">
+        <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">What Can it Do?</h2>
+                    <div class="content has-text-centered">
+                                    </div>
+                <h3 class="title is-4">Human-Object Interaction (HOI)</h3>
+                <p class="content has-text-centered">
+                    The task of detecting human-object interactions involves localizing and classifying pairs of humans and objects interacting within an image. Interactions are typically represented as a triplet consisting of the object type, the specific interaction (action), and the corresponding bounding boxes for both the human and the associated object. For Interactive Visualization press the link below.
+                </p>
+                <a href="static/html4/viz.html">HOI - Interactive Visualization</a>
+            </div>
+        </div>
+        <div id="results-carousel-4" class="carousel results-carousel">
+            <div class="column is-centered has-text-centered">
+                <img src="static/results/hoi_result_1.png" alt="hoi_result1" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+            </div>
+            <div class="column is-centered has-text-centered">
+                <img src="static/results/hoi_result_2.png" alt="hoi_result2" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+            </div>
+            <div class="column is-centered has-text-centered">
+                <img src="static/results/hoi_result_3.png" alt="hoi_result3" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+            </div>
+        </div>
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                  <div class="content has-text-centered">
+                  </div>
+                  <h3 class="title is-4">Situation Recognition (SiR)</h3>
+                  <p class="content has-text-centered"> 
+                    The goal of SiR is to generate a structured summary of an image that captures the primary activity and the entities involved in specific roles, forming a semantic frame structure as defined in the field of linguistic semantics. In this formulation, the central activity being depicted corresponds to the chosen verb, whose arguments are nouns labelled by their task in this action.  For Interactive Visualization press the link below.
+                  </p>
+                  <a href="static/html2/viz.html">SiR - Interactive Visualization</a>
+              </div>
+          </div>
+          <div id="results-carousel-3" class="carousel results-carousel">
+              <div class="column is-centered has-text-centered">
+                  <img src="static/results/sir_result_1.jpg" alt="sir_result1" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+              </div>
+              <div class="column is-centered has-text-centered">
+                  <img src="static/results/sir_result_2.jpg" alt="sir_result2" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+              </div>
+              <div class="column is-centered has-text-centered">
+                  <img src="static/results/sir_result_3.jpg" alt="sir_result3" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+              </div>
+          </div>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <div class="content has-text-centered">
+                </div>
+                <h3 class="title is-4">Grounded Situation Recognition (GSR)</h3>
+                <p class="content has-text-centered">
+                    GSR extends the SiR task by additionally expecting a bounding box prediction for each nominal argument, i.e. requiring a predicted location for each participant in the action. For Interactive Visualization press the link below.
+                </p>
+                <a href="static/html3/viz.html">GSR - Interactive Visualization</a>
+            </div>
+        </div>
+        <div id="results-carousel-4" class="carousel results-carousel">
+            <div class="column is-centered has-text-centered">
+                <img src="static/results/gsr_result_1.jpg" alt="GSR1" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+            </div>
+            <div class="column is-centered has-text-centered">
+                <img src="static/results/gsr_result_2.jpg" alt="GSR2" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+            </div>
+            <div class="column is-centered has-text-centered">
+                <img src="static/results/gsr_result_3.jpg" alt="GSR3" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+            </div>
+            <div class="column is-centered has-text-centered">
+                <img src="static/results/gsr_result_4.jpg" alt="GSR4" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+            </div>
+            <div class="column is-centered has-text-centered">
+                <img src="static/results/gsr_result_5.jpg" alt="GSR5" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+            </div>
+        </div>
+        </div>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <div class="content has-text-centered">
+                </div>
+                    <h3 class="title is-4">Human-Human Interaction (HHI)</h3>
+                    <p class="content has-text-centered">
+                         The task of understanding interactions between humans bears similarity to HOI detection, but has attracted separate attention and approaches due to the complex nature of HHI as de pending on social context, their often non-local nature, and connection to human body pose. For Interactive Visualization press the link below.
+                    </p>
+                        <a href="static/html1/viz.html">HHI - Interactive Visualization</a>
+                </div>
+            </div>
+            <div id="results-carousel-2" class="carousel results-carousel">
+                <div class="column is-centered has-text-centered">
+                    <img src="static/results/hhi_result_1.png" alt="hhi_result1" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+                </div>
+                <div class="column is-centered has-text-centered">
+                    <img src="static/results/hhi_result_2.png" alt="hhi_result2" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+                </div>
+                <div class="column is-centered has-text-centered">
+                    <img src="static/results/hhi_result_3.png" alt="hhi_result3" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+                </div>
+                <div class="column is-centered has-text-centered">
+                    <img src="static/results/hhi_result_4.png" alt="hhi_result4" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+        <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <h2 class="title has-text-centered">Additional Examples of Dynamic Scene Understanding <br>from Vision-Language Representations
+                </h2>
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div class="column is-centered has-text-centered">
+                        <img src="static/results/hhi_example.png" alt="hhi_example" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+                    </div>
+                    <div class="column is-centered has-text-centered">
+                        <img src="static/results/sir_example.png" alt="sir_example" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+                    </div>
+                    <div class="column is-centered has-text-centered">
+                        <img src="static/results/gsr_example.png" alt="gsr_example" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+                    </div>
+                    <div class="column is-centered has-text-centered">
+                        <img src="static/results/hoi_example.png" alt="hoi_example" height="300" width="auto" style="max-height: 300px; max-width: 2000px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                        Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p>
+                    <p>
+                        Website source code based on the <a href="https://nerfies.github.io/"> Nerfies</a> project page.
+                        If you want to reuse their <a href="https://github.com/nerfies/nerfies.github.io">source code</a>, please credit them appropriately.
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+</body>
+</html>
